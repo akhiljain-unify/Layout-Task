@@ -105,7 +105,6 @@ ul {
     height: 100%;
 }
 
-/* Side Navigation */
 .side-nav {
     width: 4rem;
     background-color: #171717;
@@ -130,7 +129,7 @@ ul {
     background-color: #262626;
 }
 
-.nav-icon.profile {
+.nav-icon .profile {
     background-color: #262626;
     border-radius: 50%;
 }
@@ -139,14 +138,12 @@ ul {
     flex: 1;
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* Top Bar */
 .top-bar {
     height: 3.5rem;
     border-bottom: 1px solid #e5e5e5;
@@ -182,7 +179,7 @@ ul {
     border-radius: 0.25rem;
 }
 
-/* Dashboard Content */
+
 .dashboard-content {
     flex: 1;
     padding: 1.5rem;
@@ -193,7 +190,6 @@ ul {
     background-color: #fafafa;
 }
 
-/* Stats Grid */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -208,7 +204,6 @@ ul {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .stat-label {
