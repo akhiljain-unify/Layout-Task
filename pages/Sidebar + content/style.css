@@ -100,6 +100,7 @@ ul {
 .layout {
     display: grid;
     flex: 1 1 0;
+    height: 100%;
 
     grid-template-columns: 260px 1fr;
 
@@ -110,7 +111,7 @@ ul {
 .left-nav{
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    height: 100%;
     width: 16rem;
     border-right:1px solid rgb(229 229 229);
 }
