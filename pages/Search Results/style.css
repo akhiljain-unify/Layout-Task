@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+  
+.screen{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.top-nav{
+    display: flex;
+    gap: 0.5rem;
+    height: 3.5rem;
+    align-items: center;
+    padding: 2px 1rem;
+    font-size: 0.9rem;
+    overflow-x:auto;
+
+}
+.top-nav span{
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-right: 0.5rem;
+    color: rgb(115,115,115);
+    font-weight: 300;
+    font-weight: 500;
+}
+
+.top-nav a{
+    padding: 0.375rem 0.75rem;
+    line-height: 1rem;
+    font-size: 0.75rem;
+    background-color: rgb(245 245 245);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    color:inherit;
+    transition: all 200ms ease-in-out;
+    font-weight: 500;
+    flex-shrink: 0;
+
+}
+
+.top-nav a:hover{
+    background-color:rgb(207, 204, 204) ;
+}
+.top-nav a:focus{
+    background-color: black;
+    color: white;
+}
+
+.top-nav a.active{
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.source {
+    width: 100%;
+    height: 2rem;
+
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+
+
+    background-color: #f5f5f5;
+    color: #868585;
+    border-top: 1px solid #e5e1e1;
+    border-bottom: 1px solid #e5e1e1;
+
+}
+.source span{
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(115,115,115);
+}
+
+
+
+
+.container {
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 1.5rem;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    height: 3rem;
+}
+
+.logo {
+    background-color: #d4d4d4;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 0.125rem;
+}
+
+.search-bar {
+    height: 3rem;
+    flex: 1;
+    max-width: 42rem;
+    border-radius: 9999px;
+    background-color: #f5f5f5;
+    border: 1px solid #d4d4d4;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.icon-square {
+    width: 2rem;
+    height: 2rem;
+    background-color: #e5e5e5;
+    border-radius: 0.125rem;
+}
+
+.icon-circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: #e5e5e5;
+    border-radius: 9999px;
+}
+
+.nav-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 8rem;
+}
+
+.nav-item-active {
+    height: 1.25rem;
+    width: 3rem;
+    background-color: #171717;
+    border-radius: 0.125rem;
+}
+
+.nav-item {
+    height: 1.25rem;
+    background-color: #e5e5e5;
+    border-radius: 0.125rem;
+}
+
+.nav-item-lg {
+    width: 4rem;
+}
+
+.nav-item-md {
+    width: 3.5rem;
+}
+
+.nav-item-sm {
+    width: 3rem;
+}
+
+.nav-item-xs {
+    width: 2.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.results-container {
+    max-width: 42rem;
+    margin-left: 8rem;
+    width: 100%;
+}
+
+.results-info {
+    height: 1rem;
+    width: 12rem;
+    background-color: #e5e5e5;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-item {
+    margin-bottom: 2rem;
+}
+
+.result-url {
+    height: 0.75rem;
+    width: 16rem;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-title {
+    height: 1.25rem;
+    width: 24rem;
+    background-color: #d4d4d4;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-desc-full {
+    height: 1rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-desc-partial {
+    height: 1rem;
+    width: 75%;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+}

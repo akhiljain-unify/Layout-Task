@@ -28,6 +28,7 @@
     align-items: center;
     padding: 2px 1rem;
     font-size: 0.9rem;
+    overflow-x: auto;
 
 }
 .top-nav span{
@@ -50,6 +51,7 @@
     color:inherit;
     transition: all 200ms ease-in-out;
     font-weight: 500;
+    flex-shrink: 0;
 
 }
 
@@ -98,7 +100,7 @@ ul {
 }
 
 
-chat-container {
+.chat-container {
     flex: 1;
     overflow: hidden;
     display: flex;
@@ -106,14 +108,13 @@ chat-container {
 }
 
 
-/* Main Container */
 .chat-container {
     flex: 1;
     overflow: hidden;
     display: flex;
 }
 
-/* Sidebar */
+
 .chat-sidebar {
     width: 16rem;
     border-right: 1px solid #e5e5e5;
@@ -344,7 +345,6 @@ chat-container {
     margin-top: 0.5rem;
 }
 
-/* Input Area */
 .input-area {
     height: 5rem;
     border-top: 1px solid #e5e5e5;

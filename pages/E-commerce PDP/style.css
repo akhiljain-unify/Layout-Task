@@ -29,6 +29,7 @@
     padding: 2px 1rem;
     font-size: 0.9rem;
     overflow-x: auto;
+
 }
 .top-nav span{
     font-weight: 500;
@@ -58,7 +59,7 @@
     background-color:rgb(207, 204, 204) ;
 }
 .top-nav a:focus{
-    border: blue;
+    background-color: black;
     color: white;
 }
 
@@ -99,214 +100,216 @@ ul {
 }
 
 
-.dashboard-container {
+
+
+
+.product-container {
     flex: 1;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
-.side-nav {
-    width: 4rem;
-    background-color: #171717;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 1rem;
-}
-
-.nav-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 0.25rem;
-}
-
-.nav-icon.active {
-    background-color: #404040;
-}
-
-.nav-icon.inactive {
-    background-color: #262626;
-}
-
-.nav-icon .profile {
-    background-color: #262626;
-    border-radius: 50%;
-}
-
-.nav-spacer {
-    flex: 1;
-}
-
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.top-bar {
+.top-header {
     height: 3.5rem;
-    border-bottom: 1px solid #e5e5e5;
+    background-color: #171717;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
-    justify-content: space-between;
-}
-
-.page-title {
-    height: 1.5rem;
-    width: 12rem;
-    background-color: #e5e5e5;
-    border-radius: 0.25rem;
-}
-
-.top-actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.action-button {
-    height: 2rem;
-    width: 8rem;
-    background-color: #f5f5f5;
-    border-radius: 0.25rem;
-}
-
-.icon-button {
-    height: 2rem;
-    width: 2rem;
-    background-color: #f5f5f5;
-    border-radius: 0.25rem;
-}
-
-
-.dashboard-content {
-    flex: 1;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    overflow: auto;
-    background-color: #fafafa;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-.stat-card {
-    height: 7rem;
-    background-color: white;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e5e5;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+.logo {
+    height: 2rem;
+    width: 6rem;
+    background-color: #404040;
+    border-radius: 0.25rem;
 }
 
-.stat-label {
-    height: 1rem;
+.search-bar {
+    flex: 1;
+    max-width: 42rem;
+    height: 2.5rem;
+    background-color: #262626;
+    border-radius: 0.25rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-icon {
+    height: 2rem;
+    width: 2rem;
+    background-color: #404040;
+    border-radius: 0.25rem;
+}
+
+
+.content-area {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+}
+
+
+.product-images-section {
+    width: 50%;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.thumbnail-column {
     width: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    height: 5rem;
+    background-color: #e5e5e5;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+}
+
+.thumbnail.active {
+    border-color: #171717;
+}
+
+.main-image {
+    flex: 1;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+}
+
+
+.product-details-section {
+    width: 50%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid #e5e5e5;
+}
+
+.product-category {
+    height: 1rem;
+    width: 6rem;
     background-color: #e5e5e5;
     border-radius: 0.25rem;
 }
 
-.stat-value {
+.product-name {
     height: 2rem;
-    width: 6rem;
+    width: 100%;
+    background-color: #e5e5e5;
+    border-radius: 0.25rem;
+}
+
+.product-rating {
+    height: 1.5rem;
+    width: 12rem;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.product-price {
+    height: 2.5rem;
+    width: 8rem;
     background-color: #d4d4d4;
     border-radius: 0.25rem;
 }
 
-.stat-change {
-    height: 0.75rem;
-    width: 4rem;
+.product-description {
+    height: 1rem;
+    width: 10rem;
     background-color: #f5f5f5;
     border-radius: 0.25rem;
 }
 
-.charts-container {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-}
-
-.chart-card {
-    background-color: white;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e5e5;
-    padding: 1rem;
+/* Color Selection */
+.option-group {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
-.chart-card.large {
-    flex: 2;
-}
-
-.chart-card.small {
-    flex: 1;
-}
-
-.chart-title {
-    height: 1.5rem;
-    width: 8rem;
+.option-label {
+    height: 1.25rem;
+    width: 4rem;
     background-color: #e5e5e5;
     border-radius: 0.25rem;
-    margin-bottom: 1rem;
 }
 
+.color-options {
+    display: flex;
+    gap: 0.5rem;
+}
 
-.chart-area {
-    flex: 1;
-    background-color: #f5f5f5;
+.color-swatch {
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 0.25rem;
+    background-color: #e5e5e5;
+    border: 2px solid transparent;
 }
 
-.chart-title.small {
-    width: 6rem;
+.color-swatch.active {
+    border-color: #171717;
 }
 
-.donut-chart {
-    flex: 1;
+.color-swatch.light {
+    background-color: #f5f5f5;
+}
+
+
+.size-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.size-option {
+    height: 2.5rem;
+    width: 3rem;
+    border-radius: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.875rem;
+    border: 1px solid #d4d4d4;
 }
 
-.donut {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    border: 20px solid #e5e5e5;
-    border-top-color: #171717;
+.size-option.active {
+    border: 2px solid #171717;
+    border-width: 2px;
 }
 
-
-.table-card {
-    height: 16rem;
-    background-color: white;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e5e5;
-    padding: 1rem;
+/* Action Buttons */
+.action-buttons {
     display: flex;
-    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
-.table-title {
-    height: 1.5rem;
-    width: 10rem;
-    background-color: #e5e5e5;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-}
-
-.table-area {
+.add-to-cart-button {
+    height: 3rem;
     flex: 1;
-    background-color: #f5f5f5;
+    background-color: #171717;
+    border-radius: 0.25rem;
+}
+
+.wishlist-button {
+    height: 3rem;
+    width: 3rem;
+    background-color: #e5e5e5;
     border-radius: 0.25rem;
 }

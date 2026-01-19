@@ -28,6 +28,7 @@
     align-items: center;
     padding: 2px 1rem;
     font-size: 0.9rem;
+    overflow-x: auto;
 
 }
 .top-nav span{
@@ -50,7 +51,7 @@
     color:inherit;
     transition: all 200ms ease-in-out;
     font-weight: 500;
-
+    flex-shrink: 0;
 }
 
 .top-nav a:hover{

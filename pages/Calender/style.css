@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    height: 3.5rem;
+    align-items: center;
+    padding: 2px 1rem;
+    font-size: 0.9rem;
+    overflow-x: auto;
+
+}
+
+.top-nav span {
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-right: 0.5rem;
+    color: rgb(115, 115, 115);
+    font-weight: 300;
+    font-weight: 500;
+}
+
+.top-nav a {
+    padding: 0.375rem 0.75rem;
+    line-height: 1rem;
+    font-size: 0.75rem;
+    background-color: rgb(245 245 245);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: all 200ms ease-in-out;
+    font-weight: 500;
+    flex-shrink: 0;
+
+}
+
+.top-nav a:hover {
+    background-color: rgb(207, 204, 204);
+}
+
+.top-nav a:focus {
+    background-color: black;
+    color: white;
+}
+
+.top-nav a.active {
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.source {
+    width: 100%;
+    height: 2rem;
+
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+
+
+    background-color: #f5f5f5;
+    color: #868585;
+    border-top: 1px solid #e5e1e1;
+    border-bottom: 1px solid #e5e1e1;
+
+}
+
+.source span {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(115, 115, 115);
+}
+
+
+.calendar-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 256px;
+    border-right: 1px solid #e5e5e5;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: white;
+}
+
+.logo {
+    height: 40px;
+    width: 112px;
+    background: #171717;
+    border-radius: 4px;
+}
+
+.mini-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.day-header {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #737373;
+}
+
+.day-cell {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.day-cell:hover {
+    background: #f5f5f5;
+}
+
+.day-cell.today {
+    background: #171717;
+    color: white;
+}
+
+.day-cell.other-month {
+    color: #a3a3a3;
+}
+
+.divider {
+    height: 1px;
+    background: #e5e5e5;
+}
+
+.task-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-header {
+    height: 16px;
+    width: 80px;
+    background: #e5e5e5;
+    border-radius: 4px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-checkbox {
+    height: 12px;
+    width: 12px;
+    background: #a3a3a3;
+    border-radius: 2px;
+}
+
+.task-text {
+    height: 16px;
+    flex: 1;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.toolbar {
+    height: 56px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 16px;
+}
+
+.nav-button {
+    height: 32px;
+    width: 32px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: #d4d4d4;
+}
+
+.month-label {
+    height: 24px;
+    width: 128px;
+    background: #e5e5e5;
+    border-radius: 4px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.view-toggle {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.view-button {
+    height: 28px;
+    width: 64px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.view-button.active {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid {
+    flex: 1;
+    display: flex;
+}
+
+.time-column {
+    width: 64px;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-slot {
+    flex: 1;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 8px;
+    padding-top: 4px;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+.days-grid {
+    flex: 1;
+    display: flex;
+}
+
+.day-column {
+    flex: 1;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-header-cell {
+    height: 48px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-name {
+    font-size: 12px;
+    color: #737373;
+}
+
+.day-number {
+    font-size: 14px;
+}
+
+.day-number.today {
+    background: #171717;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-content {
+    flex: 1;
+    position: relative;
+}
+
+.event {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.event.gray {
+    background: #e5e5e5;
+    top: 32px;
+    height: 64px;
+}
+
+.event.dark {
+    background: #262626;
+    top: 96px;
+    height: 48px;
+}
+
+.event.light {
+    background: #d4d4d4;
+    top: 16px;
+    height: 80px;
+}

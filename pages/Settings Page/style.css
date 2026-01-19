@@ -26,7 +26,7 @@
     gap: 0.5rem;
     height: 3.5rem;
     align-items: center;
-    padding: 0px 1rem;
+    padding: 2px 1rem;
     font-size: 0.9rem;
     overflow-x: auto;
 
@@ -100,162 +100,216 @@ ul {
 }
 
 
-
-.kanban-container {
+.settings-container {
     flex: 1;
     overflow: hidden;
+    display: flex;
+    height: 100%;
+}
+
+.settings-sidebar {
+    width: 16rem;
+    border-right: 1px solid #e5e5e5;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.search-box {
+    height: 2.5rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    height: 1rem;
+    flex: 1;
+    background-color: #e5e5e5;
+    border-radius: 0.25rem;
+}
+
+.menu-item {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item.active {
+    background-color: #e5e5e5;
+}
+
+.menu-label {
+    height: 1rem;
+    width: 6rem;
+    border-radius: 0.25rem;
+}
+
+.menu-item.active .menu-label {
+    background-color: #a3a3a3;
+}
+
+.menu-item .menu-label {
+    background-color: #e5e5e5;
+}
+
+.settings-main {
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.top-bar {
+.settings-header {
     height: 3.5rem;
     border-bottom: 1px solid #e5e5e5;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
-    gap: 1rem;
 }
 
-.board-title {
+.page-title {
     height: 1.5rem;
-    width: 12rem;
-    background-color: #e5e5e5;
-    border-radius: 0.25rem;
-}
-
-.spacer {
-    flex: 1;
-}
-
-.avatar-group {
-    display: flex;
-    margin-right: 0.5rem;
-}
-
-.avatar {
-    height: 2rem;
-    width: 2rem;
-    background-color:rgb(212,212,212);
-    border-radius: 9999px;
-    border: 2px solid white;
-    margin-right: -0.5rem;
-}
-
-.add-button {
-    height: 2rem;
     width: 6rem;
-    background-color: #f5f5f5;
+    background-color: #d4d4d4;
     border-radius: 0.25rem;
 }
 
-.board-area {
-    flex: 1 1 0;
+.settings-content {
+    flex: 1;
     padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    background-color: rgb(245,245,245);
-}
-
-.column {
-    width: 18rem;
-    flex-shrink: 0;
-    background-color: #e5e5e5;
-    border-radius: 0.75rem;
-    padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.column-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.75rem;
-}
-
-.column-title {
-    height: 1.25rem;
-    width: 6rem;
-    background-color: #a3a3a3;
-    border-radius: 0.25rem;
-}
-
-.column-count {
-    height: 1.25rem;
-    width: 1.5rem;
-    background-color: #a3a3a3;
-    border-radius: 0.25rem;
-}
-
-.cards-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     overflow-y: auto;
 }
 
-/* Card */
-.card {
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.settings-form {
+    max-width: 42rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
-.card-title {
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.section-title {
+    height: 1.25rem;
+    width: 8rem;
+    background-color: #d4d4d4;
+    border-radius: 0.25rem;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-label-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-label {
     height: 1rem;
-    width: 100%;
     background-color: #e5e5e5;
     border-radius: 0.25rem;
 }
 
-.card-subtitle {
-    height: 1rem;
-    width: 75%;
+.form-label.name {
+    width: 6rem;
+}
+
+.form-label.email {
+    width: 5rem;
+}
+
+.form-label.notifications {
+    width: 8rem;
+}
+
+.form-label.newsletter {
+    width: 7rem;
+}
+
+.form-description {
+    height: 0.75rem;
     background-color: #f5f5f5;
     border-radius: 0.25rem;
 }
 
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
+.form-description.name {
+    width: 12rem;
 }
 
-.card-tags {
-    display: flex;
-    gap: 0.25rem;
+.form-description.email {
+    width: 10rem;
 }
 
-.card-tag {
-    height: 1.25rem;
-    width: 3rem;
-    background-color: #e5e5e5;
+.form-description.notifications {
+    width: 14rem;
+}
+
+.form-description.newsletter {
+    width: 12rem;
+}
+
+.form-input {
+    height: 2.5rem;
+    width: 16rem;
+    background-color: #f5f5f5;
     border-radius: 0.25rem;
 }
 
-.card-avatar {
+.toggle-switch {
     height: 1.5rem;
-    width: 1.5rem;
-    background-color: #e5e5e5;
-    border-radius: 50%;
+    width: 3rem;
+    border-radius: 9999px;
 }
 
-.add-card-button {
-    height: 2rem;
-    width: 100%;
+.toggle-switch.off {
     background-color: #d4d4d4;
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
 }
 
+.toggle-switch.on {
+    background-color: #171717;
+}
 
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.action-button {
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 0.25rem;
+}
+
+.action-button.cancel {
+    background-color: #e5e5e5;
+}
+
+.action-button.save {
+    background-color: #171717;
+}
 
 
 
