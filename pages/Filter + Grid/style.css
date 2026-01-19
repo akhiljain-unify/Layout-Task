@@ -28,7 +28,7 @@
     align-items: center;
     padding: 2px 1rem;
     font-size: 0.9rem;
-    overflow-x: hidden;
+    overflow-x: auto;
 
 }
 .top-nav span{
